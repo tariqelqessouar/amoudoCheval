@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>amoudocheval</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   
+   <link rel="stylesheet" href="../style/style.css">
+    <script src="https://kit.fontawesome.com/3de89fd88f.js" crossorigin="anonymous"></script>
+    
+
+
+</head>
+<body>
+    
+      
+<!-- Top bar-->
+<div class="container-fluid top-bar p-0" >
+   <div class="row">
+        <div class="col-md-9 " style="width: 73%;"></div>
+        <div class="col-md-3 ">
+            <ul class="list-group list-group-horizontal">
+                <li class=" list-group-item flag"> 
+                    <a href="#"> <img title="English(en_US)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" ></a></li>
+                
+                <li class="   list-group-item flag"> <a href="#"> <img title="Francais(fr_FR)"  alt="Francais(fr_FR)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII=" ></a></li>
+                    
+                <li class=" list-group-item flag"> <a href="#"> <img title="Polski(pl_PL)"     alt="Polski(pl_PL)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEISURBVHjaYvz/8SMDDPyD43//gPQ/bAAggFhACvn4gMT///8Zwdr+/wcRjP//MzMwMP1HAV+ePQMIIBYGqKL/yIz/2AAjI+O/P38AAoiFSNUQKaCTAAKIBehWRrhqMMSjAagDIIBYGPj5Gfr6/j979v/PH4Y/f/7D0e/f/38DGb/BjN8gWWnpfwsXAgQQ2EkPH/5/8OD/718MvyHqfv3/9fv/r18gNhLJ+OkT0DkAAQR2ElgIZDyyIlTVEMv/MDAABBBIAzPYAQxwRZja/gA1/GX4+xfoHIAAAmlg+v2HQVISbMxfhj8gnYxgIxkgJBD9/QtBQMUAAcT4FRy5cMSAykWTAgKAAAMA0PVcqMe0XaEAAAAASUVORK5CYII=" ></a></li>
+                  
+                <li class="  list-group-item flag"> <a href="#"> <img title="Deutsch(de_DE)"   alt="Deutsch(de_DE)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYvTxcWb4+53h3z8GZpZff/79+v3n/7/fDAz/GHAAgABi+f37e3FxOZD1Dwz+/v3z9y+E/AMFv3//+Qumfv9et241QACxMDExAVWfOHkJJAEW/gUEP0EQDn78+AHE/gFOQJUAAcQiy8Ag8O+fLFj1n1+/QDp+/gQioK7fP378+vkDqOH39x9A/RJ/gE5lAAhAYhzcAACCQBDkgRXRjP034R0IaDTZTFZn0DItot37S94KLOINerEcI7aKHAHE8v/3r/9//zIA1f36/R+o4tevf1ANYNVA9P07RD9IJQMDQACxADHD3z8Ig4GMHz+AqqHagKp//fwLVA0U//v7LwMDQACx/LZiYFD7/5/53/+///79BqK/EMZ/UPACSYa/v/8DyX9A0oTxx2EGgABi+a/H8F/m339BoCoQ+g8kgRaCQvgPJJiBYmAuw39hxn+uDAABxMLwi+E/0PusRkwMvxhBGoDkH4b/v/+D2EDyz///QB1/QLb8+sP0lQEggFh+vGXYM2/SP6A2Zoaf30Ex/J+PgekHwz9gQDAz/P0FYrAyMfz7wcDAzPDtFwNAgAEAd3SIyRitX1gAAAAASUVORK5CYII=" ></a></li>
+                  
+                <li class=" list-group-item flag"> <a href="#"> <img title="Русский (ru_RU)"  alt="Русский" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE2SURBVHjaYvz69T8DAvz79w9CQVj/0MCffwwAAcQClObiAin6/x+okxHMgPCAbOb//5n+I4EXL74ABBALxGSwagTjPzbAyMgItAQggBg9Pf9nZPx//x7kjL9////9C2QAyf9//qCQQCQkxFhY+BEggFi2b/+nq8v46BEDSPQ3w+8//3//BqFfv9BJeXmQEwACCOSkP38YgHy4Bog0RN0vIOMXVOTPH6Cv/gEEEEgDxFKgHEgDXCmGDUAE1AAQQCybGZg1f/d8//XsH0jTn3+///z79RtE/v4NZfz68xfI/vOX+4/0ZoZFAAHE4gYMvD+3/v2+h91wCANo9Z+/jH9VxBkYAAKIBRg9TL//MEhKAuWAogxgZzGC2CCfgUggAoYdGAEVAwQQ41egu5AQAyoXTQoIAAIMAD+JZR7YOGEWAAAAAElFTkSuQmCC" ></a></li>
+                  
+            </ul>
+        </div>
+   </div>
+</div>
+<!-- end Top bar -->
+    
+<!--logo-->
+     <div id="logo" class="container">
+         <img  src="https://amodoucheval.com/wp-content/themes/adventure/images/logo.png" alt="Agadir Horse Ride – Agadir Camel Ride – Agadir Quad – Agadir Buggy – Horse Riding in Agadir – Camel Riding in Agadir – quad biking in Agadir – buggy ride Agadir – Hiking in agadir – Agadir Buggy Tour – Agadir Buggy ride – buggy bike agadir – agadir dune buggy" title="Agadir Horse Ride – Agadir Camel Ride – Agadir Quad – Agadir Buggy – Horse Riding in Agadir – Camel Riding in Agadir – quad biking in Agadir – buggy ride Agadir – Hiking in agadir – Agadir Buggy Tour – Agadir Buggy ride – buggy bike agadir – agadir dune buggy" >
+         <section class="dashedline m-3">
+          <hr/">
+        </section>
+        </div>
+<!--end logo-->
+   
+<!--navbar-->
+
+    <!--add toggle button-->
+    <header class="sticky-top">
+      <div class="container bg-white">
+    <nav  class="navbar navbar-expand-md  navbar-light " style="align-content: center;">
+      <div class="container-fluid ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" mx-5 collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a style="background-color: gold;" class="nav-link active text-dark text-uppercase  h6" aria-current="page" href="#"> <i class="fas fa-home" ::before> </i>  Home</a>
+            <a class="nav-link  text-dark text-uppercase h6" href="#"><i class="fas fa-horse-head" ::before aria-hidden="true"></i>  Horse ride</a>
+            <a class="nav-link text-dark text-uppercase h6" href="#"> <i class="fa fa-tripadvisor" ::before aria-hidden="true"></i>  CAMEL RIDING IN AGADIR</a>
+            <a class="nav-link  text-dark text-uppercase h6" href="#"><i class="fas fa-campground" ::before aria-hidden="true"></i> HIKING</a>
+            <a class="nav-link text-dark text-uppercase h6" href="#"><i class="fa fa-binoculars " ::before aria-hidden="true"></i> THINGS TO DO</a>
+            <a class="nav-link text-dark text-uppercase h6" href="#"><i class="fa fa-users" ::before aria-hidden="true"></i> ABOUT US</a>
+            <a class="nav-link text-dark text-uppercase h6" href="#"><i class="fa fa-envelope " ::before aria-hidden="true"></i> CONTACT </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    </div>
+    <div class="col-12"><br></div>
+
+  </div>
+ 
+
+
+<!-- end navbar-->
+    </header>
+
+ <main>
+  <div class="container">
+    <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0  img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2020/04/74144_7cfbc601b5138a57cfa632ca389b88c420190202195352_thumb_565.jpg" alt="8 Days Paradise Valleys and beach ride of atlantic in Agadir, Morocco," title="8 Days Paradise Valleys and beach ride of atlantic in Agadir, Morocco,">
+      </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">8 Days Paradise Valleys and beach ride of atlantic in Agadir, Morocco,</a></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">things to do</a></p>
+            <p id="fin-paragraph">« Paradise Valley » is the name given to the valley located in the village of Immouzar. An oasis that is guaranteed to take your breath away with its...</p>
+      </div>
+      </div> 
+   </div>
+   <hr>
+     <!--add image-->
+     <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/05/agadir-sunset-hore-ride-1-420x277.jpg" title="8 Days Paradise Valleys and beach ride of atlantic in Agadir, Morocco,">
+      </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">Sunset Horse Ride (2 hours),</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>29.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir | things to do</a></p>
+            <p id="fin-paragraph">Come and join us for a two hour sunset ride. We will collect you and bring you to the stables where you will be paired with your partner before...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+       <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/05/ensemble-sur-la-page-420x277.jpg" title="Agadir Horse Riding (2 hours),">
+       </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">Agadir Horse Riding (2 hours),</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>29.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir | things to do</a></p>
+            <p id="fin-paragraph">Come and join us for a two hour sunset ride. We will collect you and bring you to the stables where you will be paired with your partner before....</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+         <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/05/agadir-horse-riding-420x277.jpg" title="3 hours Horse Riding,">
+       </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">3 hours Horse Riding,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>39.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir | things to do</a></p>
+            <p id="fin-paragraph">We will meet with you, and select for you the horse that suits your level of expertise whether as a beginner or a well-seasoned rider.Your comfort, safety, and enjoyment...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+        <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/05/agadir-dune-horse-ride-420x277.jpg" title="2 hours or half day horse/camel Riding with Tagine/BBQ,">
+       </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">2 hours or half day horse/camel Riding with Tagine/BBQ,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>39.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir</a></p>
+            <p id="fin-paragraph">Half day or 2 hours horse riding with Tagine/BBQ. Morning ride with lunch or afternoon sunset ride with dinner.Welcome to a real Moroccan experience. After picking you up from...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+       <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/03/full-day-horse-riding-in-agadir-420x277.jpg" title="Full Day Horse Riding,">
+       </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">Full Day Horse Riding,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>69.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir | things to do</a></p>
+            <p id="fin-paragraph">The trip sets off at 9 am at the ranch then we trek along the beach up into the mountains leading down to Taghazout where we stop for a...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+        <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/04/adil-amodoucheval-420x277.jpg" title="1 Day Horse riding + bivouac,">
+    </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">1 Day Horse riding + bivouac,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>119.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir | things to do</a></p>
+            <p id="fin-paragraph">The trip starts at 9 am at the ranch then we trek along the beach up into the mountains to Taghazout where we stop for a picnic then continue...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+       <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/05/agadir-full-day-horse-ride-420x277.jpg"title="2 Days and 1 night Horse Riding Tour,">
+    </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">2 Days and 1 night Horse Riding Tour,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>169.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir</a></p>
+            <p id="fin-paragraph">We trek along the beach up into the mountains and go for a picnic at the Berber village, and then we continue our way through the mountains until we...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+       <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/04/imouzar-2-420x277.jpg" title="Paradise Valley Tour: 3 Days Horse Riding,">
+     </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">Paradise Valley Tour: 3 Days Horse Riding,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>298.99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir</a></p>
+            <p id="fin-paragraph">« Paradise Valley » is the name given to the valley located in the village of Immouzar. An oasis that is guaranteed to take your breath away with its...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+       <!--add image-->
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-sm-12 ">
+        <div class="col-12"><br></div>
+        <img class="m-md-5  m-lg-5 p-md-0 p-lg-0 img-fluid" width="420" height="277" src="https://amodoucheval.com/wp-content/uploads/2019/04/essaouira-04-420x277.jpg" title="ESSAOUIRA: 6 days of Horse riding and 5 camping nights,">
+     </div>
+      <div class="col-md-8 col-lg-7 col-sm-12">
+        <div class="col-12"><br></div>
+       <div class=" m-lg-5 m-md-5 p-md-0 p-lg-0" >
+            <p ><a href="#" id="paragraph-title">ESSAOUIRA: 6 days of Horse riding and 5 camping nights,</a> <button style="background-color:#71c756;;text-transform: uppercase;
+              color: #ffffff; font-weight: bold;"type="button" class="btn btn-md float-end"><i class="fas fa-euro-sign"></i></span>749,99</button></p>
+            <p id="milieu-paragraph" ><a href="#" class="text-dark">Horse Riding in Agadir | things to do</a></p>
+            <p id="fin-paragraph">« We begin with Lunch at Ranch Amodou. After that, we travel by taxi to the Berber village of Ait Amar where we collect our horses for the start of...</p>
+          </div>
+          </div>
+      </div> 
+      <hr>
+   </div>
+  </main>
+
+  <footer>
+    <div class="row">
+      <div class="col-md-4 col-lg-4 "></div>
+      <nav class="container col-md-8 col-lg-7 col-sm-7 col-7" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>  
+    </div>
+    <div class="container">
+     <hr>
+    </div>
+   <div class="container">
+     <div class="row">
+        <div class="col-md-3 col-sm-6">
+         <p  id="txt">Book by Phone</p>
+         <p id="txt2"><i class="fab fa-whatsapp"></i> +212 670 341 510<br></p>
+         <p  class="offset-1 offset-md-2"style="font-size: 11px;">Availability: 24h/7j</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <p id="txt">Contact us</p>
+           <p id="txt2"><i class="fas fa-envelope"></i> amodoucheval@gmail.com</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <p id="txt">Services and Support</p>
+          <p id="txt2"> <i class="fas fa-headphones"></i>  Support Centre</p>
+          <p  class="offset-1 offset-md-2"style="font-size: 11px;">0653 24 91 21</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <p id="txt"> Payment methods:</p>
+          <div class="column dt-sc-one-half ">
+            <a href="#"><img src="http://www.iconninja.com/ico/128/logo-method-payment-online-finance-paypal-4366.ico" width="100px" height="70px" alt="PayPal"></a>
+            <br>
+            <a href="#"><img src="https://image.flaticon.com/icons/png/128/1235/1235446.png" width="100px" height="60px" alt="Cash"></a>
+          </div>
+        </div>
+     </div>
+   </div>
+   <hr>
+   <div class="container">
+     <ul class="footer-links list-inline">
+       <li class="list-inline-item page_item page-item-4532"><a href="https://amodoucheval.com/about-us/">About Us</a></li>
+       <li class="list-inline-item page_item page-item-4446"><a href="https://amodoucheval.com/contact/">Contact</a></li>
+       <li class="list-inline-item page_item page-item-4443 current_page_item"><a href="https://amodoucheval.com/" aria-current="page">Home</a></li>
+    </ul>
+    <br>
+    <h4>Amodoucheval sarl.</h4>
+    <br>
+    <p style="color: #8b8b8b;font-size:13px ; "> We offer horse riding in the south of Morocco, in the regions of Agadir, Essaouira, and also, the fabulous desert of Zagora. Our stables are composed of beautiful horse, barbs, and the Arabic barbs that are strikingly sure-footed with attractive characters that you will fall in love with.
+      Our horses are reliable, and are selected by our team to meet your expectations.</p>
+  </div>
+  <!--copyright-->
+  <div class="copyright type2">
+    <div class="container">                            
+      <div class="foot-site-status">
+      <p><span>12,263</span> Community follows</p>
+      <p><span>5,527</span> Book en line</p>                            
+    </div>                                                    
+    <div class="copyright-content">
+      <p style="line-height: 26px;">© 2021 - Amodoucheval Agadir- by <a href="http://amodoucheval.com" title="">TariQ</a></p>
+    </div>           
+   </div>
+  </div>
+  <nav style="font-family: sans-serif; background: #ffffffeb;padding: 5px;;width: 100%;z-index: 100;position: fixed;    bottom: 0px;right: 0px;display: block;margin: 0 0.5em;">
+    <ul style="text-align:center;">
+      <li style="display:inline-block;">
+        <i style="font-size:25px;" aria-hidden="true" class="fab fa-whatsapp-square" title="call"></i>
+      </li>
+      <li style="display:inline-block;">
+        <i  style="font-size:25px;" aria-hidden="true" class="fas fa-envelope" title="gmail"></i>
+      </li>
+      <li style="display:inline-block;">
+        <i  style="font-size:25px;" aria-hidden="true" class="fab fa-facebook-square" title="facebook"></i>
+      </li>
+      </ul>
+</nav>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
+</html>
